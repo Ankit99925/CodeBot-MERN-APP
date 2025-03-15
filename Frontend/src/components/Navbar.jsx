@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
+
 const NavBar = () => {
   return (
-    <nav className="flex justify-between items-center p-4 bg-gray-800 text-white">
-      <h1 className="text-2xl">FullStack Blog</h1>
-      <div className="flex space-x-4">
-        <Link to="/">Home</Link>
-        <Link to="/create">New Blog</Link>
-      </div>
+    <nav className="flex justify-between items-center p-6 bg-gray-900 text-white shadow-lg">
+      <h1 className="text-3xl font-bold">Coding BOT Powered By GEMINI</h1>
+      <div className="flex space-x-6"></div>
     </nav>
   );
 };

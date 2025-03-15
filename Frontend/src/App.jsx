@@ -1,18 +1,20 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NavBar from "./components/Navbar";
-import BlogProvider from "./store/BlogContext";
-import Home from "./components/Home";
-import CreateBlog from "./components/CreateBlog";
+import ChatProvider from "./store/ChatContext";
+
+import Chat from "./components/Chat";
+
+import ChatLayout from "./layout/ChatLayout";
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-      <BlogProvider>
+      <ChatProvider>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create" element={<CreateBlog />} />
+          <Route path="/" element={<ChatLayout />}>
+            <Route path="/" element={<Chat />} />
+            <Route path="/conversation/:id" element={<Chat />} />
+          </Route>
         </Routes>
-      </BlogProvider>
+      </ChatProvider>
     </BrowserRouter>
   );
 }
