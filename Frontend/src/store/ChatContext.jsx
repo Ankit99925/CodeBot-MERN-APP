@@ -11,7 +11,7 @@ const ChatProvider = ({ children }) => {
     setLoading(true);
     const fetchData = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/");
+        const { data } = await axios.get("https://codebot-mern-app-backend.onrender.com/");
         setChats(data.conversation);
       } catch (e) {
         setError(e);
