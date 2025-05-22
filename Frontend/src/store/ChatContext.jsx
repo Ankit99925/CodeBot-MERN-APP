@@ -11,7 +11,7 @@ const ChatProvider = ({ children }) => {
     setLoading(true);
     const fetchData = async () => {
       try {
-        const { data } = await axios.get("https://codebot-mern-app-backend.onrender.com/");
+        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/`);
         setChats(data.conversation);
       } catch (e) {
         setError(e);

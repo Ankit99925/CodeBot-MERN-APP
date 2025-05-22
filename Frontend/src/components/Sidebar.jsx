@@ -13,7 +13,7 @@ const Sidebar = () => {
   };
 
   const handleDeleteChat = async (id) => {
-    await axios.delete(`https://codebot-mern-app-backend.onrender.com/api/conversation/${id}`);
+    await axios.delete(`${import.meta.env.VITE_API_URL}/conversation/${id}`);
     deleteChat(id);
   };
 

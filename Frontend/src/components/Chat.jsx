@@ -27,8 +27,8 @@ const Chat = () => {
     setLoading(true);
     const fetchData = async () => {
       const url = id
-        ? `https://codebot-mern-app-backend.onrender.com/conversation/${id}`
-        : "https://codebot-mern-app-backend.onrender.com/api/conversation/";
+        ? `${import.meta.env.VITE_API_URL}/conversation/${id}`
+        : `${import.meta.env.VITE_API_URL}/conversation/`;
       const method = id ? "put" : "post";
       try {
         const { data } = await axios[method](url, {

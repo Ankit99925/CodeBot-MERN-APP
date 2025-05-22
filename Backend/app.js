@@ -1,5 +1,4 @@
-const ENV = process.env.NODE_ENV || "production";
-require("dotenv").config({ path: `.env.${ENV}` });
+require("dotenv").config();
 
 //External Modules
 const express = require("express");
